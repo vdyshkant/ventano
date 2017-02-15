@@ -210,7 +210,7 @@ gulp.task('watch', function() {
 gulp.task('connect', function() {
     connect.server({
         root: [outputDir],
-        port: 8809,
+        port: 8814,
         livereload: true
     });
 });
