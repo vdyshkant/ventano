@@ -8,74 +8,25 @@ footer.footer
         .row
           .col-1.col
             .footer-box
-              h4 Окна
-              ul.list-unstyled
-                li: a.footer-box__link(href="javascript:void(0)") Оконные системы
-                li: a.footer-box__link(href="javascript:void(0)") Стеклопакет
-                li: a.footer-box__link(href="javascript:void(0)") Фурнитура
-                li: a.footer-box__link(href="javascript:void(0)") Аксессуары
-                li: a.footer-box__link(href="javascript:void(0)") Энергосбережение
-                li: a.footer-box__link(href="javascript:void(0)") Советы по выбору
-                li: a.footer-box__link(href="javascript:void(0)") Доп опции
-          .col-2.col
-            .footer-box
-              h4 Остекление
-              ul.list-unstyled
-                li: a.footer-box__link(href="javascript:void(0)") Цех
-                li: a.footer-box__link(href="javascript:void(0)") Коттедж
-                li: a.footer-box__link(href="javascript:void(0)") Квартира
-                li: a.footer-box__link(href="javascript:void(0)") Балкон
-                li: a.footer-box__link(href="javascript:void(0)") Офис
-            .footer-box
-              h4 Продукция
-              ul.list-unstyled
-                li: a.footer-box__link(href="javascript:void(0)") Двери
-                li: a.footer-box__link(href="javascript:void(0)") Витражи
-                li: a.footer-box__link(href="javascript:void(0)") Перегородки
-                li: a.footer-box__link(href="javascript:void(0)") Входные группы
-                li: a.footer-box__link(href="javascript:void(0)") Нестандартные конструкции
-          .col-3.col
-            .footer-box
-              h4 Услуги
-              ul.list-unstyled
-                li: a.footer-box__link(href="javascript:void(0)") Консультация
-                li: a.footer-box__link(href="javascript:void(0)") Замер
-                li: a.footer-box__link(href="javascript:void(0)") Доставка
-                li: a.footer-box__link(href="javascript:void(0)") Монтаж
-                li: a.footer-box__link(href="javascript:void(0)") Гарантия
-            .footer-box
-              h4 Цены
-              ul.list-unstyled
-                li: a.footer-box__link(href="javascript:void(0)") Типовые окна
-                li: a.footer-box__link(href="javascript:void(0)") Калькулятор
-                li: a.footer-box__link(href="javascript:void(0)") Акции
-                li: a.footer-box__link(href="javascript:void(0)") Рассрочка под 0%
-          .col-4.col
-            .footer-box
-              h4 О компании
-              ul.list-unstyled
-                li: a.footer-box__link(href="javascript:void(0)") Наши преимущества
-                li: a.footer-box__link(href="javascript:void(0)") Отдел продаж
-                li: a.footer-box__link(href="javascript:void(0)") Отдел производства
-                li: a.footer-box__link(href="javascript:void(0)") Монтажный отдел
-                li: a.footer-box__link(href="javascript:void(0)") Отдел доставки
-                li: a.footer-box__link(href="javascript:void(0)") Наши сотрудники
-                li: a.footer-box__link(href="javascript:void(0)") Наши сертификаты
-                li: a.footer-box__link(href="javascript:void(0)") Наши партнёры
-                li: a.footer-box__link(href="javascript:void(0)") Наши обьекты
-                li: a.footer-box__link(href="javascript:void(0)") Отзывы
-                li: a.footer-box__link(href="javascript:void(0)") Контакты
-
-          //- right content
-          .col-5.footer-contact-infos
-
-            .footer-contact-infos__left
               //- callback
               .footer__callback
                 h4.footer__title Гарячая линия:
-                .footer__callback__phone +7 727 228-28-28
+                ul.list-unstyled
+                  li.footer__callback__phone: span +38 044 200-00-84
+                  li.footer__callback__phone: span +38 067 406-63-28
+                  li.footer__callback__phone: span +38 044 332-68-65
+                  li.footer__callback__phone: span +38 044 592-80-55
 
+          .col-2.col
+            .footer-box
+              //- addresses
+              .footer__address
+                h4.footer__title Адрес нашего офиса:
+                .footer__address__item
+                  .footer__address__item__city г. Киев
+                  .footer__address__item__streets бульвар Дружбы Народов 23, офис 23
 
+            .footer-box
               //- socials
               .footer__socials
                 h4.footer__title Мы в социальных сетях:
@@ -87,25 +38,11 @@ footer.footer
                   a.footer__socials__item(href="javascript:void(0)")
                     +svg([{'class': 'icon-socials-yt svg-icon', 'pathid': 'svg-socials-item', 'filename':'footer-socials-yt'}])
 
-            .footer-contact-infos__right
-              //- addresses
-              .footer__address
-                h4.footer__title Адреса наших отделений:
-                .footer__address__item
-                  .footer__address__item__city г. Алматы
-                  ul.footer__address__item__streets
-                    li 2-й микрорайон, д.5
-                    li ул. Сатпаева, 50
-                    li ул. Казыбаева, 26
-                .footer__address__item
-                  .footer__address__item__city г. Капшагай
-                  ul.footer__address__item__streets
-                    li 2-й микрорайон, д.13
-
-
-        //- footer-bottom-row
-        .footer-bottom-row
-          .footer__copy &copy; Real Plast
-          .footer__manufactured
-            span Сделано в
-            +svg([{'class': 'icon-manufactured svg-icon', 'pathid': 'svg-manufactured', 'filename':'manufactured_uct'}])
+          .col-3.col
+            .footer-box
+              //- footer-copy
+              .footer-copy
+                .footer__company &copy; NiMax
+                .footer__manufactured
+                  span Сделано в
+                  +svg([{'class': 'icon-manufactured svg-icon', 'pathid': 'svg-manufactured', 'filename':'manufactured_uct'}])
