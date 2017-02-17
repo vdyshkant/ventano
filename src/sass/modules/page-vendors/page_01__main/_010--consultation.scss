@@ -1,14 +1,19 @@
 .page-index .consultation {
   // bg 1
   background: rgba(5,104,157,1);
-  /* Old Browsers */background: -moz-linear-gradient(top, rgba(5,104,157,1) 0%, rgba(42,86,190,1) 26%, rgba(84,65,227,1) 77%, rgba(92,60,233,1) 100%);
-   /* FF3.6+ */background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(5,104,157,1)), color-stop(26%, rgba(42,86,190,1)), color-stop(77%, rgba(84,65,227,1)), color-stop(100%, rgba(92,60,233,1)));
-  /* Chrome, Safari4+ */background: -webkit-linear-gradient(top, rgba(5,104,157,1) 0%, rgba(42,86,190,1) 26%, rgba(84,65,227,1) 77%, rgba(92,60,233,1) 100%);
-   /* Chrome10+,Safari5.1+ */background: -o-linear-gradient(top, rgba(5,104,157,1) 0%, rgba(42,86,190,1) 26%, rgba(84,65,227,1) 77%, rgba(92,60,233,1) 100%);
-   /* Opera 11.10+ */background: -ms-linear-gradient(top, rgba(5,104,157,1) 0%, rgba(42,86,190,1) 26%, rgba(84,65,227,1) 77%, rgba(92,60,233,1) 100%);
-   /* IE 10+ */background: linear-gradient(to bottom, rgba(5,104,157,1) 0%, rgba(42,86,190,1) 26%, rgba(84,65,227,1) 77%, rgba(92,60,233,1) 100%);
+  /* Old Browsers */background: -moz-linear-gradient(top, rgba(5,104,157,1) 0%, rgba(5,104,157,1) 27%, rgba(84,65,227,1) 77%, rgba(92,60,233,1) 100%);
+   /* FF3.6+ */background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(5,104,157,1)), color-stop(27%, rgba(5,104,157,1)), color-stop(77%, rgba(84,65,227,1)), color-stop(100%, rgba(92,60,233,1)));
+  /* Chrome, Safari4+ */background: -webkit-linear-gradient(top, rgba(5,104,157,1) 0%, rgba(5,104,157,1) 27%, rgba(84,65,227,1) 77%, rgba(92,60,233,1) 100%);
+   /* Chrome10+,Safari5.1+ */background: -o-linear-gradient(top, rgba(5,104,157,1) 0%, rgba(5,104,157,1) 27%, rgba(84,65,227,1) 77%, rgba(92,60,233,1) 100%);
+   /* Opera 11.10+ */background: -ms-linear-gradient(top, rgba(5,104,157,1) 0%, rgba(5,104,157,1) 27%, rgba(84,65,227,1) 77%, rgba(92,60,233,1) 100%);
+   /* IE 10+ */background: linear-gradient(to bottom, rgba(5,104,157,1) 0%, rgba(5,104,157,1) 27%, rgba(84,65,227,1) 77%, rgba(92,60,233,1) 100%);
   /* W3C */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05689d', endColorstr='#5c3ce9', GradientType=0 );
   /* IE6-9 */
+
+
+  box-shadow: 2px 2px 7px 0px rgba(68, 67, 65, 0.41);
+  position: relative;
+  z-index: 1;
 }
 
 
@@ -48,11 +53,11 @@
     padding-bottom: 105px;
 
     @media #{$tablet} {
-      padding: 100px 0;
+      padding: 90px 0 100px;
     }
 
     @media #{$mobile} {
-      padding: 70px 0;
+      padding: 95px 0 100px;
     }
   }
 
@@ -84,6 +89,7 @@
   }
 }
 
+
 // TITLE
 .page-index .consultation {
   & .consultation-title{
@@ -94,10 +100,18 @@
     text-transform: uppercase;
     white-space: nowrap;
     margin-bottom: 30px;
+    text-align: center;
 
-    // @media #{$wide} {
-    //   margin-right: 60px;
-    // }
+    @media #{$tablet} {
+      @include font(normal, 400, 22px, 54px, 'NotoSans');
+      margin-bottom: 20px;
+    }
+
+    @media #{$mobile} {
+      @include font(normal, 400, 22px, 33px, 'NotoSans');
+      margin-bottom: 20px;
+      white-space: normal;
+    }
 
     // @media #{$tablet} {
     //   @include font(normal, 700, 21px, 40px, 'NotoSans');
@@ -111,20 +125,94 @@
   }
 }
 
+
+
+.page-index .consultation {
+  & .CLASS{
+
+  }
+}
+
+
+.page-index .consultation {
+  & .consultation-form{
+    // font-size: 0;
+    // vertical-align: top;
+    @include clearfix;
+  }
+}
+
+
+
+.page-index .consultation {
+  & .consultation-input{
+    display: block;
+    float: left;
+
+    @include font(normal, 400, 14px, 40px, 'NotoSans');
+    line-height: 16px;
+    position: relative;
+    width: 265px;
+    margin-right: 20px;
+    padding: 11px 34px 11px 19px;
+    text-transform: none;
+    border: none;
+    outline: 0;
+    color: rgba(255, 255, 255, 1);
+    background-color: #7583db;
+
+    @media #{$tablet} {
+      width: 260px;
+      margin-right: 18px;
+    }
+
+    @media #{$mobile} {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &::placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }
+    &::-webkit-input-placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }
+    &::-moz-placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }/* Firefox 19+ */
+    &:-moz-placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }/* Firefox 18- */
+    &:-ms-input-placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }
+  }
+}
+
+
 // BTN
 .page-index .consultation {
   & .consultation-btn{
+    display: block;
+    float: right;
     // flex
-    background: #42a455;
     width: 170px;
     height: 40px;
-    box-shadow: 3px 3px 7px 0px rgba(204, 56, 24, 0.21);
+    border-radius: 5px;
     @include font(normal, 400, 18px, 40px, 'NotoSans');
+    text-transform: uppercase;
+    letter-spacing: .8px;
     color: white;
     text-align: center;
     text-decoration: none;
     transition: .3s ease-in-out;
-    box-shadow: 3px 3px 7px 0px rgba(26, 47, 60, 0.21);
+    box-shadow: 0px 4px 0px 0px #95680f;
+    background-color:#f1b100;
     // margin-top: -1px;
     user-select: none;
     cursor: pointer;
@@ -133,16 +221,20 @@
     top: 0;
 
     &:hover {
-      background: #3a8147;
+      background: hsla(360, 75%, 47%, 1);
     }
 
     &:active {
-      background: #3a8147;
-      top: 1px;
+      background: hsla(360, 75%, 47%, 0.58);
+      //-
+      position:relative;
+      top:1px;
     }
 
     @media #{$mobile} {
       margin: 0 auto;
+      float: none;
+      width: 100%;
     }
   }
 }
