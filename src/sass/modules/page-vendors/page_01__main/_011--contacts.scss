@@ -1,6 +1,17 @@
 .page-index .contacts {
 
+  background: #fdfdfd url('../img/contacts-content_bg.png');
+  background-repeat: no-repeat;
+  background-position: 46% 90px;
 
+  @media #{$tablet} {
+    background-position: -110px 90px;
+  }
+  @media #{$mobile} {
+    background: #fdfdfd url('../img/contacts-content_bg--mobile.png');
+    background-repeat: no-repeat;
+    background-position: 47% 90px;
+  }
   // @media #{$mobile-tablet} {
   //   box-shadow: none;
   // }
@@ -10,32 +21,29 @@
 .page-index .contacts {
   & .shell {
     margin: 0 auto;
+    max-width: 1160px;
+    min-width: 1160px;
 
-    // box-shadow: 2px 2px 7px 0px rgba(68, 67, 65, 0.21);
-    // @media #{$wide} {
-    //   min-width: 1160px;
-    //   max-width: 1160px;
-    // }
-
-    // padding: 0 5px;
+    @media #{$wide} {
+      // padding: 0 20px;
+    }
 
     // outline: 2px dashed tan;
     // outline-offset: -2px;
 
-    // @media #{$tablet} {
-    //   max-width: 768px;
-    //   min-width: 768px;
-    // }
+    @media #{$tablet} {
+      min-width: 768px;
+      max-width: 768px;
+    }
 
-
-    // @media #{$mobile} {
-    //   max-width: 320px;
-    //   min-width: 320px;
-    //   // а для внутряков обязательно заранее пропиши:
-    //   // & .wrap {
-    //   //   min-width: initial;
-    //   // }
-    // }
+    @media #{$mobile} {
+      min-width: 320px;
+      max-width: 320px;
+      // а для внутряков обязательно заранее пропиши:
+      // & .wrap {
+      //   min-width: initial;
+      // }
+    }
   }
 
   & .inner {
@@ -43,14 +51,19 @@
   }
 
   & .container {
+    padding: 85px 0 100px;
+    @media #{$mobile-tablet} {
+      padding: 90px 0 100px;
+    }
+
 
   }
 
   & .contacts-wrapper {
       // min-height: 600px;
-      @include clearfix;
+      // @include clearfix;
       @media #{$mobile} {
-        padding-bottom: 50px;
+        min-height: 580px;
       }
   }
 
@@ -67,23 +80,65 @@
 }
 
 
+.page-index .contacts-title {
+  text-align: center;
+  @media #{$tablet} {
+    overflow: hidden;
+  }
+  @media #{$mobile} {
+    display: none;
+  }
+}
+
+
 
 .page-index .contacts-title-text {
-  @include font(normal, 700, 36px, 54px, 'Roboto Condensed');
+  @include font(normal, 600, 36px, 54px, 'NotoSans-Bold');
   color: #444341;
   text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
 
-
+  display: inline-block;
+  padding: 0 30px;
+  position: relative;
   @media #{$tablet} {
-    @include font(normal, 700, 22px, 54px, 'Roboto Condensed');
-    margin-bottom: 10px;
+    @include font(normal, 400, 22px, 54px, 'NotoSans');
+    margin-bottom: 15px;
   }
 
   @media #{$mobile} {
-    @include font(normal, 700, 22px, 54px, 'Roboto Condensed');
-    margin-bottom: 10px;
+    @include font(normal, 400, 22px, 54px, 'NotoSans-Bold');
+    margin-bottom: 20px;
+  }
+  &::after,
+  &::before {
+
+    content: "";
+    position: absolute;
+    width: 10000%;
+    height: 1px;
+    background: #444341;
+    top: 28px;
+
+    @media #{$tablet} {
+      top: 27px;
+      display: none;
+    }
+
+    @media #{$mobile} {
+      content: none;
+    }
+  }
+
+  &::after {
+    right: -10000%;
+
+  }
+
+  &::before {
+    left: -10000%;
+    // z-index: -1;
   }
 }
 
@@ -95,19 +150,19 @@
 }
 
 
-.page-index .contacts-title {
-  & hr.divider{
-    display: block;
-    border: none;
-    outline: none;
-    width: 236px;
-    height: 1px;
-    background-color: #333;
-
-    margin: 0 auto;
-    margin-bottom: 30px;
-  }
-}
+// .page-index .contacts-title {
+//   & hr.divider{
+//     display: block;
+//     border: none;
+//     outline: none;
+//     width: 236px;
+//     height: 1px;
+//     background-color: #333;
+//
+//     margin: 0 auto;
+//     margin-bottom: 30px;
+//   }
+// }
 
 
 .page-index .PROTO {
@@ -120,44 +175,44 @@
 .page-index .contacts-content-row {
   @include clearfix;
 
+  @media #{$mobile} {
+    position: relative;
+  }
+
   &:nth-child(2n-1) {
     & .contacts-content-map {
       float: left;
+      @media #{$mobile} {
+        float: none;
+        position: absolute;
+        top: 260px;
+        left: 0;
+        right: 0;
+        width: 320px;
+        height: 404px;
+      }
     }
     & .contacts-content-desc {
-      background: url('../img/011_bg_row01.png');
-      background-position: -425px 0px;
       float: right;
-      @media #{$tablet} {
-        background-position: -425px 0px;
-      }
-      @media #{$mobile} {
-        background-position: -430px 0px;
-      }
     }
   }
 
   &:nth-child(2n) {
     & .contacts-content-map {
       float: right;
+      @media #{$mobile} {
+        float: left;
+      }
     }
     & .contacts-content-desc {
       float: left;
-      background: url('../img/011_bg_row02.png');
-        background-position: top 0px right -50px;
-      @media #{$tablet} {
-        background-position: top 0px right 225px;
-      }
-      @media #{$mobile} {
-        background-position: top 0px right 425px;
-      }
     }
   }
 }
 
 
 .page-index .contacts-content {
-  background: #d7d7d4;
+  // background: #d7d7d4;
 }
 
 
@@ -208,18 +263,18 @@
   width: 580px;
 
 
-  padding-top: 90px;
+  padding-top: 105px;
   @media #{$mobile} {
-    padding-top: 65px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-top: 0px;
+    // padding-left: 10px;
+    // padding-right: 10px;
   }
 
   @media #{$tablet} {
     width: 384px;
 
   }
-
+  //
   @media #{$mobile} {
     width: 320px;
     height: 320px;
@@ -261,16 +316,19 @@
 
 
 .page-index .contacts-content-item-title {
-  @include font(normal, 700, 32px, 63px, 'Roboto');
+  @include font(normal, 700, 32px, 63px, 'NotoSans-Bold');
   color: #444341;
+  margin-bottom: 10px;
 
   @media #{$mobile} {
-    @include font(normal, 700, 21px, 31px, 'Roboto');
+    @include font(normal, 400, 22px, 54px, 'NotoSans');
     margin-bottom: 10px;
+    text-transform: uppercase;
   }
 }
 
 .page-index .contacts-content-item-address {
+  margin-bottom: 25px;
   @media #{$mobile} {
     margin-bottom: 15px;
   }
@@ -279,28 +337,18 @@
 
 .page-index .contacts-content-item-phone-title,
 .page-index .contacts-content-item-address-title {
-  @include font(normal, 700, 18px, 27px, 'Roboto');
+  @include font(normal, 700, 18px, 27px, 'NotoSans-Bold');
   color: #444341;
 }
 
 
 .page-index .contacts-content-item-phone-text,
 .page-index .contacts-content-item-address-text {
-  @include font(normal, 400, 18px, 27px, 'Roboto');
+  @include font(normal, 400, 18px, 27px, 'NotoSans');
   color: #444341;
-}
-
-
-.page-index .PROTO {
-  & .CLASS{
-
-  }
-}
-
-
-.page-index .PROTO {
-  & .CLASS{
-
+  @media #{$mobile} {
+    max-width: 280px;
+    margin: 0 auto;
   }
 }
 
