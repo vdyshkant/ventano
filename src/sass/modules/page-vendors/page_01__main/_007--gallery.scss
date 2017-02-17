@@ -1,10 +1,10 @@
-.page-fitments .gallery {
+.page-index .gallery {
   // bg 1
-  background: #444341;
+  background: #fff;
 }
 
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .shell {
     margin: 0 auto;
     max-width: 1160px;
@@ -44,21 +44,21 @@
 }
 
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .CLASS{
 
   }
 }
 
 
-.page-fitments .gallery-essence {
+.page-index .gallery-essence {
   @media #{$mobile} {
     @include clearfix;
   }
 }
 
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .row-1{
     display: flex;
     flex-direction: row;
@@ -70,7 +70,7 @@
   }
 }
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .row-2{
     @media #{$mobile} {
       float: left;
@@ -79,7 +79,7 @@
 }
 
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .row-1 .col {
     margin-bottom: 20px;
 
@@ -90,7 +90,7 @@
 }
 
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .row-1 .col-1{
     width: 550px;
     margin-right: 20px;
@@ -111,7 +111,7 @@
 }
 
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .row-1 .col-2{
     width: 170px;
     margin-right: 20px;
@@ -133,7 +133,7 @@
 }
 
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .row-1 .col-3{
     width: 360px;
 
@@ -158,7 +158,7 @@
 }
 
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .col-2 .gallery__item:first-child,
   & .col-3 .gallery__item:first-child{
     margin-bottom: 20px;
@@ -166,14 +166,14 @@
 }
 
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .CLASS{
 
   }
 }
 
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .row-2 .col-s {
     display: flex;
     flex-direction: row;
@@ -181,7 +181,7 @@
 }
 
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .col-s .gallery__item {
     width: 360px;
     height: 225px;
@@ -195,49 +195,49 @@
 }
 
 // CONTENT BLOCKS:
-.page-fitments .gallery__item__content {
+.page-index .gallery__item__content {
   padding: 15px 20px;
 }
 
 
-.page-fitments .gallery__item__title {
+.page-index .gallery__item__title {
   @include font(normal, 700, 18px, 27px, 'Roboto');
-  color: #444341;
+  color: #fff;
   margin-bottom: 20px;
 }
 
 
-.page-fitments .gallery__item__text {
+.page-index .gallery__item__text {
   @include font(normal, 400, 15px, 21px, 'Roboto');
-  color: #444341;
+  color: #fff;
 }
 
 
-.page-fitments .gallery__item__content--small {
+.page-index .gallery__item__content--small {
   width: 170px;
   height: 225px;
 }
 
 
-.page-fitments .gallery__item__content--medium {
+.page-index .gallery__item__content--medium {
   width: 360px;
   max-height: 255px;
 }
 
 
-.page-fitments .gallery__item__content--big {
+.page-index .gallery__item__content--big {
   width: 550px;
   height: 470px;
 }
 
 
-.page-fitments .gallery__item-contended {
+.page-index .gallery__item-contended {
 
-  background: #fff;
+  background: #046ba0;
 }
 
 
-.page-fitments .gallery-contended--top {
+.page-index .gallery-contended--top {
   position: relative;
   &::before{
     position: absolute;
@@ -251,12 +251,12 @@
     height: 0;
     border-style: solid;
     border-width: 0 20px 20px 20px;
-    border-color: transparent transparent #fff transparent;
+    border-color: transparent transparent #046ba0 transparent;
   }
 }
 
 
-.page-fitments .gallery-contended--right {
+.page-index .gallery-contended--right {
   position: relative;
   &::before{
     position: absolute;
@@ -270,12 +270,12 @@
     height: 0;
     border-style: solid;
     border-width: 20px 0 20px 20px;
-    border-color: transparent transparent transparent #ffffff;
+    border-color: transparent transparent transparent #046ba0;
   }
 }
 
 
-.page-fitments .gallery-contended--left {
+.page-index .gallery-contended--left {
   position: relative;
   &::before{
     position: absolute;
@@ -289,19 +289,19 @@
     height: 0;
     border-style: solid;
     border-width: 20px 20px 20px 0;
-    border-color: transparent #ffffff transparent transparent;
+    border-color: transparent #046ba0 transparent transparent;
   }
 }
 
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .CLASS{
 
   }
 }
 
 
-.page-fitments .gallery {
+.page-index .gallery {
   & .CLASS{
 
   }
