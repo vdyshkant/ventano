@@ -61,13 +61,6 @@ gulp.task('clib', function() {
   return gulp.src([
     '!src/js/clib/*.js', // ignore this file
     'src/js/modules/common.js', // e.g. /path/to/mymodule/mymodule.js',
-    'src/js/modules/004_features.js',
-    'src/js/modules/005_sale-slider.js',
-    'src/js/modules/006_choose.js',
-    'src/js/modules/007_gallery.js',
-    'src/js/modules/008_feedbacks.js',
-    'src/js/modules/009_certification.js',
-    'src/js/modules/010_contacts.js',
     'src/js/modules/logger.js' // e.g. /path/to/mymodule/mymodule/*.js'
   ])     // выборка files from glob
 
@@ -85,9 +78,13 @@ gulp.task('js', function() {
       '!src/js/clib/*.js', // ignore this file
       'src/js/modules/common.js', // e.g. /path/to/mymodule/mymodule.js',
       'src/js/modules/logger.js', // e.g. /path/to/mymodule/mymodule/*.js'
-      'src/js/modules/p08/01-slider-general.js', // e.g. /path/to/mymodule/mymodule/*.js'
-      'src/js/modules/p08/slider-clock-timers.js', // e.g. /path/to/mymodule/mymodule/*.js'
-      'src/js/modules/p10/paginator.js' // e.g. /path/to/mymodule/mymodule/*.js'
+      'src/js/modules/004_features.js',
+      'src/js/modules/005_sale-slider.js',
+      'src/js/modules/006_choose.js',
+      'src/js/modules/007_gallery.js',
+      'src/js/modules/008_feedbacks.js',
+      'src/js/modules/009_certification.js',
+      'src/js/modules/010_contacts.js'
     ])     // выборка files from glob
         .pipe(concat('main.js'))
         .pipe(gulp.dest(outputDir + '/js'))
