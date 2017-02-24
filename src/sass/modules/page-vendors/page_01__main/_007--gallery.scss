@@ -17,7 +17,8 @@
 
     @media #{$mobile} {
       min-width: 320px;
-      max-width: 320px;
+
+      padding: 0 10px;
       // а для внутряков обязательно заранее пропиши:
       // & .wrap {
       //   min-width: initial;
@@ -30,11 +31,14 @@
   }
 
   & .container {
-    padding-top: 100px;
+    padding-top: 95px;
     padding-bottom: 100px;
 
+    @media #{$tablet} {
+      padding: 80px 0 115px;
+    }
     @media #{$mobile} {
-      padding: 50px 0;
+      padding: 80px 0 90px;
     }
   }
 
@@ -43,6 +47,9 @@
   }
 
 }
+
+
+@import "007.1--gallery__title";
 
 
 .page-index .gallery {
@@ -65,8 +72,9 @@
     flex-direction: row;
 
     @media #{$mobile} {
-      float: left;
-      margin-right: 20px;
+      // float: left;
+      // margin-right: 20px;
+      margin-bottom: 20px;
     }
   }
 }
@@ -74,7 +82,7 @@
 .page-index .gallery {
   & .row-2{
     @media #{$mobile} {
-      float: left;
+      // float: left;
     }
   }
 }
@@ -119,6 +127,7 @@
 
     @media #{$mobile} {
       width: 360px;
+
       @include clearfix;
 
       & .gallery__item {
@@ -192,6 +201,10 @@
     &:last-child {
       margin-right: 0;
     }
+
+    @media #{$mobile} {
+      max-width: 310px;
+    }
   }
 }
 
@@ -202,15 +215,25 @@
 
 
 .page-index .gallery__item__title {
-  @include font(normal, 700, 18px, 27px, 'Roboto');
+  @include font(normal, 700, 18px, 27px, 'NotoSans');
   color: #fff;
   margin-bottom: 20px;
 }
 
 
 .page-index .gallery__item__text {
-  @include font(normal, 400, 15px, 21px, 'Roboto');
+  @include font(normal, 400, 15px, 21px, 'NotoSans');
   color: #fff;
+
+
+  // ovfw text
+  max-height: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media #{$mobile} {
+    @include font(normal, 400, 14px, 21px, 'NotoSans');
+  }
 }
 
 
@@ -223,6 +246,10 @@
 .page-index .gallery__item__content--medium {
   width: 360px;
   max-height: 255px;
+
+  @media #{$mobile} {
+    max-width: 310px;
+  }
 }
 
 

@@ -1,0 +1,39 @@
+.page-index .gallery {
+
+  & .gallery-title {
+    text-align: center;
+
+
+    @media #{$wide} {
+      margin-bottom: 50px;
+    }
+
+    @media #{$tablet} {
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    @media #{$mobile} {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.page-index .gallery-title-text {
+  @include font(normal, 600, 36px, 54px, 'NotoSans');  // 13+13
+  color: #444341;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  display: inline-block;
+  @media #{$tablet} {
+    @include font(normal, 600, 22px, 54px, 'NotoSans');  // 18+18
+  }
+
+  @media #{$mobile} {
+    @include font(normal, 600, 22px, 32px, 'NotoSans');  // 8 + 8, e.g. 10+10
+
+    max-width: 220px;
+  }
+
+}
