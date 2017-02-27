@@ -36,7 +36,7 @@
     position: relative;
 
     @media #{$mobile} {
-      height: 738px;
+      height: 573px;
     }
   }
 }
@@ -79,7 +79,7 @@
 
     @media #{$mobile} {
       // height: 180px;
-      height: 738px;
+      height: 573px;
     }
 
     // outline: 2px dashed darkolivegreen;
@@ -130,10 +130,16 @@
     height: 430px;
     width: 370px;
 
-    padding: 35px 40px 20px;
+    padding: 65px 40px 20px;
 
     position: relative;
     z-index: 2;
+
+    @media #{$tablet} {
+      min-height: 465px;
+      padding-top: 105px;
+      background-position: 0 -5px;
+    }
 
     @media #{$mobile} {
       width: 320px;
@@ -150,48 +156,30 @@
 }
 
 
-.page-index .slider-sales {
-  & .slider-sales__item__stock .stock__timer {
-    background: url('../img/slider-sales_stock_bg-timer.png') no-repeat;
-    background-position: 0 -40px;
-    height: 160px;
-    width: 100%;
-
-    padding-top: 55px;
-
-    @media #{$mobile} {
-      // margin-top: -20px;
-      // margin-top: 0;
-      background: url('../img/slider-sales_stock_bg-timer.png') no-repeat -20px -40px,
-                  url('../img/bg_white.jpg');
-      position: relative;
-      z-index: 1;
-    }
-
-    // outline: 2px dashed violet;
-    // outline-offset: -2px;
-  }
-}
 
 
 .page-index .stock__content {
   & .stock__title{
-    @include font(normal, 700, 32px, 29px, 'Roboto');
+    @include font(normal, 400, 25px, 37px, 'NotoSans');
     color: #fff4f4;
+    text-transform: uppercase;
     text-align: center;
     margin-bottom: 15px;
 
     & span {
       position: relative;
+      // display: inlblock;
+      // padding-left: 20px;
+      // padding-right: 20px;
       &::before {
         content: "";
         position: absolute;
-        width: 100%;
+        // width: 100%;
         height: 1px;
         background: #fff;
-        left: 0;
-        right: 0;
-        bottom: -1px;
+        left: -10px;
+        right: -10px;
+        bottom: -4px;
       }
     }
   }
@@ -200,10 +188,10 @@
 
 .page-index .stock__content {
   & .stock__desc{
-    width: 210px;
+    width: 220px;
     margin: 0 auto;
-    margin-bottom: 20px;
-    @include font(normal, 700, 18px, 27px, 'Roboto');
+    margin-bottom: 25px;
+    @include font(normal, 400, 18px, 27px, 'NotoSans');
     color: #fff4f4;
     text-align: center;
   }
@@ -217,27 +205,55 @@
 
   @media #{$mobile} {
     margin: 0 auto;
-    width: 280px;
+    width: 300px;
   }
 
   & input{
     margin-bottom: 30px;
     padding: 20px;
-    @include font(normal, 300, 14px, 10px, 'Roboto');
+    @include font(normal, 400, 14px, 10px, 'NotoSans');
     color: #8e8e8e;
 
     width: 280px;
-    height: 50px;
+    height: 40px;
     outline: none;
     border: none;
-    background: #fff;
+    background: #ccc;
+    background: rgba(255, 255, 255, 0.3);
+    background: hsla(0, 100%, 100%, 0.3);
+    // opacity: .3;
+
+    &::placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }
+    &::-webkit-input-placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }
+    &::-moz-placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }/* Firefox 19+ */
+    &:-moz-placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }/* Firefox 18- */
+    &:-ms-input-placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }
+
+    @media #{$mobile} {
+      width: 300px;
+    }
   }
 }
 
 
 .page-index .stock__content {
   & .stock__btn__wrapper {
-    min-height: 50px;
+    min-height: 40px;
     position: relative;
     margin-bottom: 20px;
   }
@@ -247,23 +263,31 @@
 .page-index .stock__content {
   & .stock__btn {
     width: 280px;
-    height: 50px;
-    @include font(normal, 400, 18px, 50px, 'Roboto');
-    color: #f9f9f9;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    background: #42a455;
-    box-shadow: 3px 3px 7px 0px rgba(26, 47, 60, 0.21);
+    height: 40px;
 
-    cursor: pointer;
-    transition: .3s ease-out;
 
     position: absolute;
     top: -1px;
     left: 0;
 
+
+
+    border-radius: 5px;
+    @include font(normal, 400, 18px, 40px, 'NotoSans');
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    box-shadow: 0px 4px 0px 0px #95680f;
+    background-color:#f1b100;
+    // margin-top: -1px;
     user-select: none;
+    cursor: pointer;
+
+
+
 
     &:hover {
       background: #3a8147;
@@ -277,75 +301,14 @@
       top: 0;
     }
 
-
-
-
-  }
-}
-
-
-.page-index .stock__content {
-  & .stock__more {
-    display: block;
-    @include font(italic, 300, 14px, 14px, 'Roboto');
-    color: #f9f9f9;
-    text-decoration: underline;
-    text-align: center;
-
-    &:hover {
-      text-decoration: none;
+    @media #{$mobile} {
+      width: 300px;
     }
-  }
-}
 
-
-.page-index .stock__timer {
-  & .stock__timer-title{
-    @include font(normal, 700, 18px, 17px, 'Roboto');
-    color: #444341;
-    text-align: center;
-    margin-bottom: 5px;
-  }
-}
-//
-//
-//
-// .page-index .stock__timer {
-//   & .stock__timer-item{
-//   color: #444341;
-//   text-align: center;
-//
-//   }
-// }
-
-
-.page-index .stock__timer {
-  & .stock__timer-num{
-    @include font(normal, 700, 18px, 30px, 'Roboto');
-  }
-}
-
-
-.page-index .stock__timer {
-  & .stock__timer-def{
-    @include font(normal, 400, 12px, 30px, 'Roboto');
-  }
-}
-
-
-.page-index .stock__content {
-  & .97987987987987987987897987987989878{
 
   }
 }
 
-
-.page-index .stock__timer {
-  & .stock__timer-essence{
-    display: flex;
-    flex-direction: row;
-  }
-}
 
 
 .page-index .slider-sales {
@@ -410,7 +373,8 @@
 
     &.active {
       position: relative;
-      border: 2px solid #42a455;
+      // border: 2px solid #42a455;
+      border: 2px solid #f0af00;
       &::before {
         position: absolute;
         content: "";
@@ -419,7 +383,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: #42a455;
+        // background: #42a455;
+        background: #f0af00;
         border-radius: 50%;
         transition: 300ms ease-in-out;
       }
@@ -429,92 +394,6 @@
 
 
 // slider end
-
-
-// countdown
-
-/**
- *	This element is created inside your target element
- *	It is used so that your own element will not need to be altered
- **/
-
-.page-index #DateCountdown0,
-.page-index #DateCountdown1,
-.page-index #DateCountdown2,
-.page-index #DateCountdown3,
-.page-index #DateCountdown4 {
-  // position: absolute;
-  // left: 0;
-  // bottom: 0;
-  // height: 50px;
-  margin: 0 auto;
-
-
-  width: 290px;
-  height: 75px;
-  padding: 0px;
-  box-sizing: border-box;
-  // background-color: #E0E8EF;
-}
-
-.page-index .time_circles {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-/**
- *	This is all the elements used to house all text used
- * in time circles
- **/
-.page-index .time_circles > div {
-    position: absolute;
-    text-align: center;
-}
-
-/**
- *	Titles (Days, Hours, etc)
- **/
-.page-index .time_circles > div > h4 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    text-transform: lowercase;
-    font-family: 'Century Gothic', Arial;
-    line-height: 1;
-    // @include font(normal, 700,
-
-    // customs
-    font-family: Roboto;
-    // font-size: 12px;
-    line-height: 16px;
-    font-weight: 400;
-    color: #444341;
-}
-
-/**
- *	Time numbers, ie: 12
- **/
-.page-index .time_circles > div > span {
-    margin: 0;
-    padding: 0;
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-family: 'Century Gothic', Arial;
-    line-height: 1;
-    font-weight: bold;
-
-    // customs
-    font-family: Roboto;
-    // font-size: 18px;
-    line-height: 16px;
-    font-weight: 700;
-    color: #444341;
-    margin-bottom: 2px;
-}
-
-
 
 
 
