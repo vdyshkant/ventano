@@ -44,10 +44,11 @@
     @media #{$tablet} {
       min-height: 770px;
       // padding: 50px 0 85px;
-      padding: 90px 0 0;
+      padding: 170px 0 130px;
     }
     @media #{$mobile} {
-      padding: 85px 0 95px;
+      padding: 85px 0 110px;
+      min-height: 400px;
     }
   }
 
@@ -99,7 +100,7 @@
   @include font(normal, 600, 36px, 54px, 'NotoSans');
   color: #444341;
   text-transform: uppercase;
-  // margin-bottom: 20px;
+  margin-bottom: 25px;
   letter-spacing: 1.5px;
 
   display: inline-block;
@@ -107,12 +108,13 @@
   position: relative;
   @media #{$tablet} {
     @include font(normal, 400, 22px, 54px, 'NotoSans');
-    // margin-bottom: 15px;
+    margin-bottom: 15px;
   }
 
   @media #{$mobile} {
-    @include font(normal, 700, 22px, 32px, 'NotoSans');
+    @include font(normal, 500, 20px, 32px, 'NotoSans');
     // margin-bottom: 20px;
+    letter-spacing: normal;
 
     max-width: 300px;
   }
@@ -330,13 +332,13 @@
    clear:both;
 // mih и h обязательно должны бить прописаны, чтоб слайды как нужно ложились на площадке
    @media #{$tablet} {
-     min-height: 550px;
-     height: 550px;
+     min-height: 685px;
+     height: 685px;
    }
 
    @media #{$mobile} {
-      min-height: 750px;
-      height: 750px;
+      min-height: 410px;
+      height: 410px;
    }
 
   //  outline: 2px dashed limegreen;
@@ -452,7 +454,7 @@
     top: 50%;
   }
 
-  @media #{$tablet} {
+  @media #{$mobile-tablet} {
     top: 50%;
   }
   &::before,
@@ -472,11 +474,17 @@
     background: -webkit-linear-gradient(top, rgba(4,107,160,1) 0%,rgba(94,63,240,1) 44%,rgba(94,63,240,1) 56%,rgba(4,107,160,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(4,107,160,1) 0%,rgba(94,63,240,1) 44%,rgba(94,63,240,1) 56%,rgba(4,107,160,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#046ba0', endColorstr='#046ba0',GradientType=0 ); /* IE6-9 */
+    @media #{$mobile} {
+      height: 52px;
+    }
   }
 
   &:after {
     background: #fff;
     height: 6px;
+    @media #{$mobile} {
+      height: 4px;
+    }
   }
 }
 
@@ -505,9 +513,11 @@
     }
 
     @media #{$mobile} {
-      width: 16px;
-      height: 25px;
-      transform: translateY(-170%);
+      width: 18px;
+      height: 31px;
+      // transform: translateY(-170%);
+
+      top: 50%;
     }
   }
 }

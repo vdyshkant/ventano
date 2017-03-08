@@ -144,7 +144,7 @@ $(document).ready(function() {
 	if($('body').is('.page-index')){
 	  if ((window.matchMedia("(max-width: 767px)").matches)) {
 
-      $('.certification .slider-item').css('max-width', '300px');
+      $('.certification .slider-item').css('max-width', '250px');
 
       // setPositinForControls();
       // function setPositinForControls() {
@@ -183,7 +183,7 @@ $(document).ready(function() {
           // console.log($movingFromCenter + ' item position.top: ' + position);
           // console.log('sum: ' + num);
           // setTimeout(function(){
-          $( ".certification .slider-controls__arrow" ).css( "top", num - 71);
+          $( ".certification .slider-controls__arrow" ).css( "top", num - 172);//was71
           // });
 
           // Now that we have the ID of the image, we can use jQuery to show the content corresponding to the tigerpicture.
