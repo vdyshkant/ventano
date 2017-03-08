@@ -1,9 +1,9 @@
 
 .page-index .choose__top-row {
-  background: url('../img/bg_white.jpg');
-  height: 120px;
+  background: #fff;
+  height: 100px;
   @media #{$mobile-tablet} {
-    height: 70px;
+    display: none;
   }
 }
 

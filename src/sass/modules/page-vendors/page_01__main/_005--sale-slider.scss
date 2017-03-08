@@ -374,7 +374,8 @@
     &.active {
       position: relative;
       // border: 2px solid #42a455;
-      border: 2px solid #f0af00;
+      // border: 2px solid #f0af00;
+      border: 2px solid #fff;
       &::before {
         position: absolute;
         content: "";
