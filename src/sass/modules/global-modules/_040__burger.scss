@@ -1,0 +1,329 @@
+@import "040a__floating-burger-essence";
+
+
+.page-index .floating {
+  // bg 1
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100px;
+
+  z-index: 201;
+
+  background: rgba(0,131,197,1);/* Old Browsers */
+  background: -moz-linear-gradient(top, rgba(0,131,197,1) 0%, rgba(44,99,217,1) 49%, rgba(95,63,240,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,131,197,1)), color-stop(49%, rgba(44,99,217,1)), color-stop(100%, rgba(95,63,240,1)));/* Chrome, Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,131,197,1) 0%, rgba(44,99,217,1) 49%, rgba(95,63,240,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,131,197,1) 0%, rgba(44,99,217,1) 49%, rgba(95,63,240,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,131,197,1) 0%, rgba(44,99,217,1) 49%, rgba(95,63,240,1) 100%); /* IE 10+ */
+  background: linear-gradient(to bottom, rgba(0,131,197,1) 0%, rgba(44,99,217,1) 49%, rgba(95,63,240,1) 100%);/* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0083c5', endColorstr='#5f3ff0', GradientType=0 );/* IE6-9 */
+
+  // outline: 2px dashed gold;
+  // outline-offset: -2px;
+
+  @media #{$wide} {
+    display: none;
+  }
+}
+
+
+.page-index .floating {
+  & .shell {
+    margin: 0 auto;
+
+
+    @media #{$wide} {
+      padding: 0 20px;
+      max-width: 1160px;
+      min-width: 1160px;
+    }
+
+    // outline: 2px dashed tan;
+    // outline-offset: -2px;
+
+    @media #{$tablet} {
+      // min-width: 768px;
+      // max-width: 768px;
+      padding: 0 20px;
+    }
+
+    @media #{$mobile} {
+      // min-width: 320px;
+      // max-width: 320px;
+      // а для внутряков обязательно заранее пропиши:
+      // & .wrap {
+      //   min-width: initial;
+      // }
+    }
+  }
+
+  & .inner {
+    // wide bg [2] for example
+  }
+
+  & .container {
+    //
+  }
+
+  & .floating-wrapper {
+    //
+  }
+
+  & .floating-essence {
+    //
+  }
+}
+
+
+.page-index .floating {
+  & .CLASS{
+
+  }
+}
+
+
+.page-index .floating {
+  & .floating-esscence-logo{
+    width: 168px;
+    height: 46px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media #{$mobile} {
+      padding-left: 10px;
+      // margin-bottom: 55px;
+    }
+  }
+  & .floating-esscence-logo-icon{
+    user-select: none;
+  }
+}
+
+
+.page-index .floating {
+  & .CLASS{
+
+  }
+}
+
+
+.page-index .floating {
+  & .floating-content{
+    @include clearfix;
+    position: relative;
+    min-height: 100px;
+  }
+  & .floating-left{
+    width: 168px;
+  }
+}
+
+
+.page-index .floating {
+  & .foating-mid__menu-link {
+    @include font(400, normal, 12px, 18px, 'NotoSans');
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+
+.page-index .floating {
+  & .foating-mid-menu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // position: relative;
+    height: 100px;
+    width: 100%;
+
+    @media #{$wide} {
+
+    }
+
+    @media #{$tablet} {
+      display: none;
+    }
+
+    @media #{$mobile} {
+      display: none;
+    }
+  }
+}
+
+
+.page-index .floating {
+  & .foating-mid__menu-list{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // position: relative;
+    // height: 100px;
+
+  }
+}
+
+
+.page-index .floating {
+  & .foating-mid__menu-item{
+    float: left;
+    margin-right: 12px;
+    margin-left: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.page-index .floating {
+  & .CLASS{
+
+  }
+}
+
+
+.page-index .floating {
+  & .floating-right{
+    float: right;
+    height: 100px;
+    width: 270px;
+
+
+    // outline: 2px gold dashed;
+    // outline-offset: -2px;
+
+    @media #{$wide} {
+
+    }
+
+    @media #{$tablet} {
+      margin-right: 0px;
+    }
+
+    @media #{$mobile} {
+      width: auto;
+      width: 27px;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+.page-index .floating {
+  & .floating-right-essence{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media #{$mobile-tablet} {
+      @include clearfix;
+      width: inherit;
+      min-height: 42px;
+    }
+
+  }
+}
+
+
+.page-index .floating {
+
+  & .floating-callback {
+    @media #{$mobile-tablet} {
+      width: 230px;
+      // margin-right: 65px;
+      float: left;
+    }
+    @media #{$mobile} {
+      display: none;
+    }
+  }
+
+  & .floating-callback__num {
+
+
+    /* Style for "+38 (000)" */
+    width: 175px;
+    height: 16px;
+    color: #ffffff;
+    font-family: "Noto Sans";
+    font-weight: 400;
+    text-transform: uppercase;
+    /* Text style for "+38" */
+    font-size: 14px;
+    /* Text style for "(000) 000" */
+    font-size: 18px;
+
+    margin-bottom: 5px;
+    position: relative;
+    letter-spacing: .5px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      // transform: translateY(-50%);
+      left: -24px;
+      width: 14px;
+      height: 40px;
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAoCAYAAADOvcv6AAACQElEQVRIS53Wv2sUQRTA8e/bSzxRcnuoaEgRBEGMihgFU4iVEEHJXbQRLY0iFiJYplAR/wCx8wcIgikskuyqwbQWigpqClEbg3iFPyC53RADerknszkDyc3kbjPlznzmzcy9eXOCo+ltWqN2BgTOAN1ACzCJ8DKjXBabi4fZri0Moey3zisM1cFohAN4PAU2uVYjMLEEzoTsqiovgJwL1b5/XoT6iDVxlnfAzgYIlK+LMAq4BNxsiMyA/1DHyMZ/Ka20r2UTlpOI0SinER42FW1hULQAA54Ax1LB2jKngHWpYDzKIRWep0Bm6FuJQi6i3GoIBbOqHybtdJ4rUg65K8pZG1SYy8yzte0EP5f3SzTKOEKvIyfH/IL90CQK+AjssELlqt/PdVufgd+BLdZOoT9XIHDBWddP4Qm72wp8cEF1neisx/qOPn6nhX/8IlnnnYwCXBGn/SIbVgMjv0h+NbDiF2ldDaTSir/xKLHrcOaAtdaZq/T4x3ntgiZxN1tzVTifL3DHCuOACYU9Dng/X0gKcl0zKfcMOOI4hC9+kW0uaCqbqXD2C+LRlevjU921KgecE+z7WDZ4xlxkEUpV4YZMj7DX85JC3HQTKIlew4v38Qt1p5d1j+ZjFDAEnGo6JJDU1XJIryjjqWGy3G4mgc5m8eKjE4cMqHIvNaxFNYX5YDN4ycM69ZjOTJVXQHsjXPeUzwzTVc0kabjifq1/HmYDOirKA4TDjsjvrdAMVkXikJMKFwR6IClc3wTeAIP/AEK0v1OvbW9ZAAAAAElFTkSuQmCC');
+    }
+  }
+}
+
+
+.page-index .floating {
+  & .floating-callback__btn{
+
+
+    /* Style for "заказать з" */
+    width: 142px;
+    height: 11px;
+    color: #ffffff;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+
+    &::before {
+      content: '';
+      // width: 100%;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      // transition: opacity .3s ease-out;
+      // opacity: 1;
+    }
+
+    &:hover::before {
+      content: none;
+      // opacity: 0.0000001;
+    }
+  }
+}
+
+
+.page-index .floating {
+  & .CLASS{
+
+  }
+}
+
+
+.page-index .floating {
+  & .CLASS{
+
+  }
+}

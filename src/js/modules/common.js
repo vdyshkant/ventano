@@ -1078,7 +1078,7 @@ $(document).ready(function() {
 })(jQuery); // eof autoFunction
 
 function showMainModal() {
-    $('#invoke_modal').click(function() {
+    $('#invoke_modal, #floating-callback').click(function() {
         $('.modal-content').fadeIn(300);
         $('.modal-home-overlay').fadeIn(300);
     });
@@ -1099,3 +1099,70 @@ function hideMainOverlay() {
 }
 
 /* eof ^^^ */
+
+
+
+/* отрабатывать только для определенной страницы
+	================================================ */
+(function($) {
+ if($('body').is('.page-index')){
+
+	 // burger animation itself:
+	 $('.floating-burger-btn #click').click(function() {
+			 $('.floating-burger-btn').toggleClass("burger-active");
+			 $('.floating-burger-overlay').fadeToggle(200, 'linear');
+			//  $('.floating-burger-essence').slideToggle(200, 'easeInOutCubic');
+			 $('.floating-burger-essence').toggleClass('opened');
+	 });
+
+	//  $('.request-callback-nav').click(function() {
+	// 		 $('.modal-content').fadeIn(300);
+	// 		 $('.modal-overlay').fadeIn(300);
+   //
+	// 		 // hide menu toggle and convert to burger
+	// 		 $('.burger-link').removeClass("burger-active");
+	// 		 $('.menu-overlay').fadeOut(200, 'linear');
+	// 		 $('.main-nav').slideUp(200, 'easeInOutCubic');
+	//  });
+   //
+   //
+	//  showMainModal();
+   //
+	//  function showMainModal() {
+	// 		 $('.request-callback').click(function() {
+	// 				 $('.modal-content').fadeIn(300);
+	// 				 $('.modal-overlay').fadeIn(300);
+	// 		 });
+	//  }
+   //
+	//  closeMainModal();
+   //
+	//  function closeMainModal() {
+	// 		 $('.modal-content-close').click(function() {
+	// 				 $('.modal-content').fadeOut(300);
+	// 				 $('.modal-overlay').fadeOut(300);
+	// 		 });
+	//  }
+   //
+	//  hideMainOverlay();
+   //
+	//  function hideMainOverlay() {
+	// 		 $('.floating-burger-overlay').click(function() {
+	// 				 $('.floating-burger-overlay').fadeOut(300);
+	// 				 $('.modal-overlay').fadeOut(300);
+	// 		 });
+	//  }
+
+
+
+
+ }
+})(jQuery); // eof autoFunction
+/* eof ^^^ */
+
+// burger:
+
+
+
+
+// eof burger
