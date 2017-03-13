@@ -291,7 +291,7 @@
 // 	color: #fafafa;
 // }
 
-.floating-burger-btn-essence {
+.banner--clone .floating-burger-btn-essence {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -302,11 +302,11 @@
 	height: 24px;
 }
 
-.floating-burger-btn-essence input {
+.banner--clone .floating-burger-btn-essence input {
 	display: none;
 }
 
-.floating-burger-btn-essence label {
+.banner--clone .floating-burger-btn-essence label {
 	position: relative;
 	width: 27px;
 	height: 40px;
@@ -317,8 +317,8 @@
 
 /* Exit Icon */
 
-.floating-burger-btn-essence label:before,
-.floating-burger-btn-essence input:checked + label:before {
+.banner--clone .floating-burger-btn-essence label:before,
+.banner--clone .floating-burger-btn-essence input:checked + label:before {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -329,7 +329,7 @@
 	background: #fafafa;
 }
 
-.floating-burger-btn-essence label:before {
+.banner--clone .floating-burger-btn-essence label:before {
 	-webkit-animation: animationOneReverse 1s ease forwards;
 	animation: animationOneReverse 1s ease forwards;
 }
@@ -340,7 +340,7 @@
 	50%, 100% { transform: rotate(0deg); }
 }
 
-.floating-burger-btn-essence input:checked + label:before {
+.banner--clone .floating-burger-btn-essence input:checked + label:before {
 	-webkit-animation: animationOne 1s ease forwards;
 	animation: animationOne 1s ease forwards;
 }
@@ -351,8 +351,8 @@
 	100% { transform: rotate(315deg); }
 }
 
-.floating-burger-btn-essence label:after,
-.floating-burger-btn-essence input:checked + label:after {
+.banner--clone .floating-burger-btn-essence label:after,
+.banner--clone .floating-burger-btn-essence input:checked + label:after {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -363,7 +363,7 @@
 	background: #fafafa;
 }
 
-.floating-burger-btn-essence label:after {
+.banner--clone .floating-burger-btn-essence label:after {
 	-webkit-animation: animationTwoReverse 1s ease forwards;
 	animation: animationTwoReverse 1s ease forwards;
 }
@@ -373,7 +373,7 @@
 	50%, 100% { transform: rotate(0deg); }
 }
 
-.floating-burger-btn-essence input:checked + label:after {
+.banner--clone .floating-burger-btn-essence input:checked + label:after {
 	-webkit-animation: animationTwo 1s ease forwards;
 	animation: animationTwo 1s ease forwards;
 }
@@ -385,7 +385,7 @@
 
 /* Burger Icon */
 
-.floating-burger-btn-essence label .floating-burger-btn-lines:before {
+.banner--clone .floating-burger-btn-essence label .floating-burger-btn-lines:before {
 	content: '';
 	position: absolute;
 	top: 6px;
@@ -402,7 +402,7 @@
 	100% { transform: translateY(0px); opacity: 1; }
 }
 
-.floating-burger-btn-essence input:checked + label .floating-burger-btn-lines:before {
+.banner--clone .floating-burger-btn-essence input:checked + label .floating-burger-btn-lines:before {
 	-webkit-animation: animationBurgerTop 1s ease forwards;
 	animation: animationBurgerTop 1s ease forwards;
 }
@@ -412,7 +412,7 @@
 	51%, 100% { transform: translateY(12px); opacity: 0; }
 }
 
-.floating-burger-btn-essence label .floating-burger-btn-lines:after {
+.banner--clone .floating-burger-btn-essence label .floating-burger-btn-lines:after {
 	content: '';
 	position: absolute;
 	bottom: 6px;
@@ -430,7 +430,7 @@
 	100% { transform: translateY(0px); opacity: 1; }
 }
 
-.floating-burger-btn-essence input:checked + label .floating-burger-btn-lines:after {
+.banner--clone .floating-burger-btn-essence input:checked + label .floating-burger-btn-lines:after {
 	-webkit-animation: animationBurgerBottom 1s ease forwards;
 	animation: animationBurgerBottom 1s ease forwards;
 }

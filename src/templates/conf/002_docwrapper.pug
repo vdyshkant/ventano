@@ -83,6 +83,20 @@ html( lang="en" )
         },
         // Throttle scroll event to fire every 250ms to improve performace
         throttle: 250,
+
+        // Callbacks
+        onInit:    function () {},
+        onStick:   function () {},
+        onUnstick: function () {
+          //- $('.banner--clone .floating-burger-btn #click').trigger( "click" );
+          $('.banner--clone .floating-burger-btn #click').attr('checked', false);
+          $('.banner--clone .floating-burger-essence').removeClass('opened');
+          $('.banner--clone .floating-burger-btn').removeClass("burger-active");
+          if ((window.matchMedia("(max-width: 1159px)").matches)) {
+            $('.floating-burger-overlay').fadeOut(200, 'linear');
+          }
+        },
+        onDestroy: function () {},
         };
         // Initialise with options
         var banner = new Headhesive('.banner', options);
