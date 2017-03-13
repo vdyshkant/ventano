@@ -44,6 +44,7 @@ gulp.task('pug', function() {
     // '!src/templates/conf/*.pug', // ignore this file
     // 'src/templates/**/*.pug'   // ignore all files
     'src/templates/pages/index.pug',
+    'src/templates/pages/debug.pug',
     'src/templates/pages/i.pug'
   ])     // выборка files from glob
         .pipe(pug( { pretty: true } ))                             // push this^^^ query to pug pluguin
@@ -78,13 +79,17 @@ gulp.task('js', function() {
       '!src/js/clib/*.js', // ignore this file
       'src/js/modules/common.js', // e.g. /path/to/mymodule/mymodule.js',
       'src/js/modules/logger.js', // e.g. /path/to/mymodule/mymodule/*.js'
+      'src/js/modules/001_window.js',
       'src/js/modules/004_features.js',
       'src/js/modules/005_sale-slider.js',
       'src/js/modules/006_choose.js',
       'src/js/modules/007_gallery.js',
       'src/js/modules/008_feedbacks.js',
       'src/js/modules/009_certification.js',
-      'src/js/modules/010_contacts.js'
+      'src/js/modules/011_modal-content.js',
+      'src/js/modules/012_burger.js',
+      'src/js/modules/013_headhesive.js',
+      'src/js/modules/013_contacts.js'
     ])     // выборка files from glob
         .pipe(concat('main.js'))
         .pipe(gulp.dest(outputDir + '/js'))
