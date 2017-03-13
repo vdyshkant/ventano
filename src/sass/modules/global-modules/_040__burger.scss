@@ -293,6 +293,7 @@
     font-weight: 400;
     text-decoration: none;
     position: relative;
+    letter-spacing: 2.2px;
 
     &::before {
       content: '';
@@ -315,9 +316,73 @@
 }
 
 
-.page-index .floating {
-  & .CLASS{
+.page-index .floating-burger-essence {
+  & .floating-callback{
+    display: none;
+    @media #{$mobile} {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+      padding-left: 25px;
+    }
+  }
+  & .floating-callback__num{
+    /* Style for "+38 (000)" */
+    text-align: right;
+    height: 16px;
+    color: #ffffff;
+    font-family: "Noto Sans";
+    font-weight: 400;
+    text-transform: uppercase;
+    /* Text style for "+38" */
+    font-size: 14px;
+    /* Text style for "(000) 000" */
+    font-size: 18px;
 
+    margin-bottom: 5px;
+    position: relative;
+    letter-spacing: .5px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      // transform: translateY(-50%);
+      left: -24px;
+      width: 14px;
+      height: 40px;
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAoCAYAAADOvcv6AAACQElEQVRIS53Wv2sUQRTA8e/bSzxRcnuoaEgRBEGMihgFU4iVEEHJXbQRLY0iFiJYplAR/wCx8wcIgikskuyqwbQWigpqClEbg3iFPyC53RADerknszkDyc3kbjPlznzmzcy9eXOCo+ltWqN2BgTOAN1ACzCJ8DKjXBabi4fZri0Moey3zisM1cFohAN4PAU2uVYjMLEEzoTsqiovgJwL1b5/XoT6iDVxlnfAzgYIlK+LMAq4BNxsiMyA/1DHyMZ/Ka20r2UTlpOI0SinER42FW1hULQAA54Ax1LB2jKngHWpYDzKIRWep0Bm6FuJQi6i3GoIBbOqHybtdJ4rUg65K8pZG1SYy8yzte0EP5f3SzTKOEKvIyfH/IL90CQK+AjssELlqt/PdVufgd+BLdZOoT9XIHDBWddP4Qm72wp8cEF1neisx/qOPn6nhX/8IlnnnYwCXBGn/SIbVgMjv0h+NbDiF2ldDaTSir/xKLHrcOaAtdaZq/T4x3ntgiZxN1tzVTifL3DHCuOACYU9Dng/X0gKcl0zKfcMOOI4hC9+kW0uaCqbqXD2C+LRlevjU921KgecE+z7WDZ4xlxkEUpV4YZMj7DX85JC3HQTKIlew4v38Qt1p5d1j+ZjFDAEnGo6JJDU1XJIryjjqWGy3G4mgc5m8eKjE4cMqHIvNaxFNYX5YDN4ycM69ZjOTJVXQHsjXPeUzwzTVc0kabjifq1/HmYDOirKA4TDjsjvrdAMVkXikJMKFwR6IClc3wTeAIP/AEK0v1OvbW9ZAAAAAElFTkSuQmCC');
+    }
+  }
+  & .floating-callback__btn{
+    /* Style for "заказать з" */
+    width: 142px;
+    height: 11px;
+    color: #ffffff;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 2.2px;
+
+    &::before {
+      content: '';
+      // width: 100%;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      // transition: opacity .3s ease-out;
+      // opacity: 1;
+    }
+
+    &:hover::before {
+      content: none;
+      // opacity: 0.0000001;
+    }
   }
 }
 

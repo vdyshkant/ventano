@@ -4,14 +4,19 @@
   // display: none;
   width: 354px;
   padding: 25px 20px 0;
+  padding-bottom: 105px;
   position: absolute;
   right: -354px;
   top: 100px;
   z-index: 201;
   background: #5f3ef1;
-  padding-bottom: 105px;
 
   transition: .3s ease-out;
+
+  @media #{$mobile} {
+    width: 250px;
+    padding-bottom: 125px;
+  }
 }
 
 
@@ -48,6 +53,10 @@
     width: 204px;
     margin: 0 auto;
     margin-bottom: 45px;
+
+    @media #{$mobile} {
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -148,6 +157,13 @@
 
 
 .page-index {
+
+  & .floating-form {
+    @media #{$mobile} {
+      display: none;
+    }
+  }
+
   & .floating-form-btn{
     // width: 340px;
     width: 100%;
@@ -436,6 +452,25 @@
   width: 100%;
   height: 100%;
   z-index: 200;
+}
+
+
+.page-index .floating-burger-essence {
+  & .CLASS{
+
+  }
+}
+
+
+//- floating-burger-essence FLOATING CALLBACK mobile only
+
+.page-index .floatingfloating-burger-essence {
+  display: none;
+
+  @media #{$mobile} {
+    display: block;
+  }
+
 }
 
 
