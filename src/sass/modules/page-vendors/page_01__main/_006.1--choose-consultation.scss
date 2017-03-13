@@ -1,0 +1,234 @@
+// ========================= choose-consultation
+
+.page-index .choose-consultation {
+  // bg 1
+
+
+
+  // box-shadow: 2px 2px 7px 0px rgba(68, 67, 65, 0.41);
+  position: relative;
+  z-index: 1;
+
+  @media #{$mobile-tablet} {
+    display: none;
+  }
+}
+
+
+.page-index .choose-consultation {
+  & .shell {
+
+    /* Permalink - use to edit and share this gradient: колорзилла/gradient-editor/#046ba0+0,3255c9+50,5c3de9+100 */
+    background: rgb(4,107,160); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(4,107,160,1) 0%, rgba(50,85,201,1) 50%, rgba(92,61,233,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(4,107,160,1) 0%,rgba(50,85,201,1) 50%,rgba(92,61,233,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(4,107,160,1) 0%,rgba(50,85,201,1) 50%,rgba(92,61,233,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#046ba0', endColorstr='#5c3de9',GradientType=0 ); /* IE6-9 */
+
+
+    margin: 0 auto;
+    max-width: 1160px;
+    min-width: 1160px;
+
+    padding: 0 20px;
+  }
+
+  & .inner {
+    // wide bg [2] for example
+  }
+
+  & .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+  }
+
+  & .range {
+
+  }
+
+  & .consultation-wrapper {
+    //
+  }
+
+  & .consultation-essence {
+    min-height: 46px;
+    // display: flex;
+    // justify-content: center;
+
+    // @media #{$mobile} {
+    //   display: block;
+    //   text-align: center;
+    // }
+
+    // @media #{$tablet} {
+    //   display: block;
+    //   @include clearfix;
+    // }
+  }
+}
+
+
+.page-index .consultation {
+  & .CLASS{
+
+  }
+}
+
+
+// TITLE
+.page-index .choose-consultation {
+  & .consultation-title{
+    float: left;
+
+    @include font(normal, 400, 18px, 38px, 'NotoSans');
+    color: #fff;
+    white-space: nowrap;
+    margin-bottom: 30px;
+    text-align: left;
+
+    width: 360px;
+    margin-right: 20px;
+
+    // @media #{$tablet} {
+    //   @include font(normal, 700, 21px, 40px, 'NotoSans');
+    //   margin-right: 30px;
+    // }
+    //
+    // @media #{$mobile} {
+    //   @include font(normal, 700, 21px, 31px, 'NotoSans');
+    //   margin-bottom: 20px;
+    // }
+  }
+}
+
+
+
+.page-index .consultation {
+  & .CLASS{
+
+  }
+}
+
+
+.page-index .choose-consultation {
+  & .consultation-form{
+    // font-size: 0;
+    // vertical-align: top;
+    @include clearfix;
+    float: right;
+    width: 740px;
+  }
+}
+
+
+
+.page-index .choose-consultation {
+  & .consultation-input{
+    display: block;
+    float: left;
+
+    @include font(normal, 400, 14px, 40px, 'NotoSans');
+    line-height: 16px;
+    position: relative;
+    width: 265px;
+    margin-right: 20px;
+    padding: 11px 34px 11px 19px;
+    text-transform: none;
+    border: none;
+    outline: 0;
+    color: rgba(255, 255, 255, 1);
+    background-color: #7583db;
+
+
+
+    &::placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }
+    &::-webkit-input-placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }
+    &::-moz-placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }/* Firefox 19+ */
+    &:-moz-placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }/* Firefox 18- */
+    &:-ms-input-placeholder {
+       color: #fff;
+       opacity: 1; // FIX
+    }
+  }
+}
+
+
+// BTN
+.page-index .choose-consultation {
+  & .consultation-btn{
+    display: block;
+    float: right;
+    // flex
+    width: 170px;
+    height: 40px;
+    border-radius: 5px;
+    @include font(normal, 400, 18px, 40px, 'NotoSans');
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    box-shadow: 0px 4px 0px 0px #95680f;
+    background-color:#f1b100;
+    // margin-top: -1px;
+    user-select: none;
+    cursor: pointer;
+
+    position: relative;
+    top: 0;
+
+    &:hover {
+      background: hsla(360, 75%, 47%, 1);
+    }
+
+    &:active {
+      background: hsla(360, 75%, 47%, 0.58);
+      //-
+      position:relative;
+      top:1px;
+    }
+
+    @media #{$mobile} {
+      margin: 0 auto;
+      float: none;
+      width: 100%;
+    }
+  }
+}
+
+
+.page-index .consultation {
+  & .CLASS{
+
+  }
+}
+
+
+.page-index .consultation {
+  & .CLASS{
+
+  }
+}
+
+
+.page-index .consultation {
+  & .CLASS{
+
+  }
+}
+
+// ========================= eof choose consultation
