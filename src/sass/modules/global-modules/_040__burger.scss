@@ -116,6 +116,10 @@
     @include clearfix;
     position: relative;
     min-height: 100px;
+
+    @media #{$mobile} {
+      min-height: 86px;
+    }
   }
   & .floating-left{
     width: 168px;
@@ -213,6 +217,7 @@
       width: auto;
       width: 27px;
       margin-right: 10px;
+      min-height: 86px;
     }
   }
 }
